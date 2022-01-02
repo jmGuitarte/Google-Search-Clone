@@ -1,0 +1,114 @@
+﻿body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 10vh 100px 10vh 80vh;
+    grid-template-columns: 96vw;
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #202124
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.nav {
+    align-items: flex-end;
+ }
+
+#advanceLabel {
+    align-items: flex-start;
+    color: #d93025;
+    font-size: 20px;
+}
+
+#advancedSearch {
+    display: grid;
+    grid-template-columns: 20vw 40vw 40vw;
+    grid-template-areas:
+        'Area1Head Area2Head Area3Head'
+        'Area1-1 Area2-1 Area3-1'
+        'Area1-2 Area2-2 Area3-2'
+        'Area1-3 Area2-3 Area3-3'
+        'Area1-4 Area2-4 Area3-4'
+        'Area1-5 search Area3-5';
+}
+
+.labelHead {grid-area: Area1Head;}
+.label1 {grid-area: Area1-1;}
+.label2 {grid-area: Area1-2;}
+.label3 {grid-area: Area1-3;}
+.label4 {grid-area: Area1-4;}
+.label5 {grid-area: Area1-5;}
+
+.formHead {grid-area: Area2Head;}
+.input1 {grid-area: Area2-1;}
+.input2 {grid-area: Area2-2;}
+.input3 {grid-area: Area2-3;}
+.input4 {grid-area: Area2-4;}
+
+.guideHead {grid-area: Area3Head;}
+.guide1 {grid-area: Area3-1;}
+.guide2 {grid-area: Area3-2;}
+.guide3 {grid-area: Area3-3;}
+.guide4 {grid-area: Area3-4;}
+.guide5 {grid-area: Area3-5;}
+
+.input1, .input2, .input3, .input4 {
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    font-size: 13px;
+    height: 25px;
+    padding: 1px 8px;
+}
+
+.input1:focus, .input2:focus, .input3:focus, .input4:focus {
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+    border: 1px solid #4d90fe;
+    outline: none;
+}
+
+span {
+    color: #666;
+    font-family: monospace;
+    font-size: 11px;
+    white-space: pre;
+}
+
+#searchButton {
+    place-self: center;
+    grid-area: search;
+    margin: 10px 0;
+    user-select: none;
+    line-height: 100%;
+    height: 30px;
+    width: 150px;
+    min-width: 120px;
+    background-color: #4d90fe;
+    border: 1px solid #3079ed;
+    color: #fff;
+}
+
+#searchButton:hover {
+    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+}
+
+.labelHead, .guideHead {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.guideHead {
+    font-size: 14px;
+}
+
+.label1, .label2, .label3, .label4, .guide1, .guide2, .guide3, .guide4 {
+    text-anchor: middle;
+}
